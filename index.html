@@ -37,7 +37,11 @@
   h1 em{font-style:italic;color:var(--gold)}
   .lede{color:var(--muted);font-size:18px;max-width:30em}
   .cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:32px}
-  .badge img{height:54px;display:block}
+  .badge{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 18px 0 14px;background:#000;color:#fff;border:1px solid #a6a6a6;border-radius:10px;text-decoration:none;line-height:1;transition:transform .15s}
+  .badge:hover{transform:translateY(-1px)}
+  .badge .apple{width:26px;height:26px;flex:none}
+  .badge-text{display:flex;flex-direction:column;align-items:flex-start;font-family:Inter,system-ui,sans-serif;font-weight:500;font-size:20px;letter-spacing:-.2px}
+  .badge-text small{font-size:10px;font-weight:400;opacity:.9;margin-bottom:2px}
   .note{font-size:13px;color:var(--muted)}
 
   .phone{justify-self:center;width:290px;aspect-ratio:9/19.5;border-radius:46px;background:var(--bg2);border:1px solid var(--line);
@@ -105,7 +109,7 @@
       <p class="lede">DuaDoor blocks the apps that steal your time — TikTok, Instagram, YouTube — until you make du'a. Every time you reach for your phone becomes a moment of dhikr.</p>
       <div class="cta">
         <a class="badge" href="https://apps.apple.com/app/id6807518234" aria-label="Download DuaDoor on the App Store">
-          <img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+          <svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.65c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.9-1.74.03-3.35 1.01-4.25 2.58-1.81 3.14-.46 7.79 1.3 10.33.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.29-1.27 3.14-2.52.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.72-1.04-2.74-4.13zM13.79 5.01c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.29.69-3.03 1.56-.66.77-1.25 2-1.09 3.18 1.15.09 2.33-.58 3.05-1.45z"/></svg><span class="badge-text"><small>Download on the</small>App Store</span>
         </a>
         <span class="note">iPhone · Free Daily Wird included</span>
       </div>
@@ -163,7 +167,7 @@
     <p class="sub">Download DuaDoor free and start with your Daily Wird today.</p>
     <div class="cta">
       <a class="badge" href="https://apps.apple.com/app/id6807518234" aria-label="Download DuaDoor on the App Store">
-        <img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+        <svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.65c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.9-1.74.03-3.35 1.01-4.25 2.58-1.81 3.14-.46 7.79 1.3 10.33.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.29-1.27 3.14-2.52.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.72-1.04-2.74-4.13zM13.79 5.01c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.29.69-3.03 1.56-.66.77-1.25 2-1.09 3.18 1.15.09 2.33-.58 3.05-1.45z"/></svg><span class="badge-text"><small>Download on the</small>App Store</span>
       </a>
     </div>
   </div>
