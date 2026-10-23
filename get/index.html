@@ -23,6 +23,9 @@
   .badge{display:inline-block;color:var(--gold);text-decoration:none;font-size:16px;font-weight:600;-webkit-tap-highlight-color:transparent}
   .badge img{display:block;height:56px;width:auto}
   small{display:block;margin-top:14px;color:var(--muted);font-size:13px;letter-spacing:.3px}
+  .escape{display:none;margin-top:22px}
+  .alt{display:inline-block;padding:12px 22px;border:1.5px solid var(--gold);border-radius:12px;color:var(--gold);text-decoration:none;font-size:16px;font-weight:600;-webkit-tap-highlight-color:transparent}
+  .hint{margin-top:10px;color:var(--muted);font-size:13px;line-height:1.45}
 </style>
 </head>
 <body>
@@ -31,7 +34,12 @@
   <h1>Pause. Make du'a. <span>Then scroll.</span></h1>
   <p>DuaDoor guards the apps you choose and asks you to make du'a before they open.</p>
   <a class="badge" href="https://apps.apple.com/app/id6807518234?pt=128799123&amp;ct=tt_bio&amp;mt=8"><img src="app-store-badge.svg" alt="Download on the App Store" width="168" height="56"></a>
+  <div class="escape" id="tt-escape">
+    <a class="alt" href="x-safari-https://duadoor.app/get/">Open in Safari</a>
+    <p class="hint">Button not working? Tap ••• at the top right, then Open in browser.</p>
+  </div>
   <small>iPhone only · iOS 17+</small>
 </main>
+<script>if(/musical_ly|BytedanceWebview|TikTok/i.test(navigator.userAgent)){document.getElementById("tt-escape").style.display="block"}</script>
 </body>
 </html>
