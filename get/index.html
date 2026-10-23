@@ -23,23 +23,35 @@
   .badge{display:inline-block;color:var(--gold);text-decoration:none;font-size:16px;font-weight:600;-webkit-tap-highlight-color:transparent}
   .badge img{display:block;height:56px;width:auto}
   small{display:block;margin-top:14px;color:var(--muted);font-size:13px;letter-spacing:.3px}
-  .escape{display:none;margin-top:22px}
-  .alt{display:inline-block;padding:12px 22px;border:1.5px solid var(--gold);border-radius:12px;color:var(--gold);text-decoration:none;font-size:16px;font-weight:600;-webkit-tap-highlight-color:transparent}
-  .hint{margin-top:10px;color:var(--muted);font-size:13px;line-height:1.45}
+  /* TikTok in-app browser only: html.tt is set by the one script below */
+  .tt-arrow,.tt-card,.tt-note{display:none}
+  html.tt .tt-arrow{display:flex;position:fixed;top:calc(8px + env(safe-area-inset-top));right:14px;flex-direction:column;align-items:center;gap:2px;color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.2px;animation:tt-bounce 1.2s ease-in-out infinite}
+  .tt-arrow svg{width:30px;height:30px;display:block}
+  @keyframes tt-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  html.tt p{margin-bottom:22px}
+  html.tt .tt-card{display:block;width:100%;text-align:left;border:1.5px solid var(--gold);border-radius:16px;padding:16px 18px;margin-bottom:24px}
+  .tt-card .step{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:600;color:var(--text);line-height:1.3}
+  .tt-card .step+.step{margin-top:12px}
+  .tt-card .n{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:15px}
+  .pill{display:inline-block;padding:1px 11px 3px;border-radius:999px;background:var(--gold);color:var(--bg);font-weight:800;letter-spacing:1px;line-height:1.25}
+  html.tt .badge{opacity:.5}
+  html.tt .tt-note{display:block;margin-top:10px;color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
+<div class="tt-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M5 12l7-7 7 7"/></svg>Tap here</div>
 <main>
   <svg class="logo" viewBox="0 0 32 32" role="img" aria-label="DuaDoor"><path d="M20 4a12 12 0 1 0 8 21A10 10 0 1 1 20 4z" fill="#C9A84C"/><path d="M24 9l1.2 2.6 2.8.3-2.1 1.9.6 2.8L24 15.2l-2.5 1.4.6-2.8-2.1-1.9 2.8-.3z" fill="#E6CB7C"/></svg>
   <h1>Pause. Make du'a. <span>Then scroll.</span></h1>
   <p>DuaDoor guards the apps you choose and asks you to make du'a before they open.</p>
-  <a class="badge" href="https://apps.apple.com/app/id6807518234?pt=128799123&amp;ct=tt_bio&amp;mt=8"><img src="app-store-badge.svg" alt="Download on the App Store" width="168" height="56"></a>
-  <div class="escape" id="tt-escape">
-    <a class="alt" href="x-safari-https://duadoor.app/get/">Open in Safari</a>
-    <p class="hint">Button not working? Tap ••• at the top right, then Open in browser.</p>
+  <div class="tt-card">
+    <div class="step"><span class="n">1</span><span>Tap <span class="pill">•••</span> at the top right</span></div>
+    <div class="step"><span class="n">2</span><span>Choose “Open in browser”</span></div>
   </div>
+  <a class="badge" href="https://apps.apple.com/app/id6807518234?pt=128799123&amp;ct=tt_bio&amp;mt=8"><img src="app-store-badge.svg" alt="Download on the App Store" width="168" height="56"></a>
+  <p class="tt-note">Works once you’re in your browser</p>
   <small>iPhone only · iOS 17+</small>
 </main>
-<script>if(/musical_ly|BytedanceWebview|TikTok/i.test(navigator.userAgent)){document.getElementById("tt-escape").style.display="block"}</script>
+<script>if(/musical_ly|BytedanceWebview|TikTok/i.test(navigator.userAgent)){document.documentElement.classList.add("tt")}</script>
 </body>
 </html>
